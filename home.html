@@ -231,5 +231,65 @@
         <h3 class="temperature-min-max">Min 26.49°C | Max 26.49°C</h3>
       </div>
     </div>
+
+    <script>
+      const currentDate = document.getElementById("date");
+      let weatherCondition = document.getElementById("weatherCondition");
+
+      const temperatureStatus = "Clouds";
+
+      const getCurrentDay = () => {
+        var weekDay = new Array(7);
+        weekDay[0] = "Sun";
+        weekDay[1] = "Mon";
+        weekDay[2] = "Tue";
+        weekDay[3] = "Wed";
+        weekDay[4] = "Thu";
+        weekDay[5] = "Fri";
+        weekDay[6] = "Sat";
+
+        let currentTime = new Date();
+        let day = weekDay[currentTime.getDay()];
+
+        return day;
+      };
+
+      const getCurrentTime = () => {
+        var months = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "June",
+          "July",
+          "Aug",
+          "Sept",
+          "Oct",
+          "Nov",
+          "Dec",
+        ];
+        var currentTime = new Date();
+        var month = months[currentTime.getMonth() + 1];
+        var date = currentTime.getDate();
+        let hours = currentTime.getHours();
+        let mins = currentTime.getMinutes();
+
+        let period = "AM";
+        if (hours > 11) {
+          period = "PM";
+          if (hours > 12) {
+            hours -= 12; // to convert to 12 hours format instead of 24
+          }
+        }
+        if (mins < 10) {
+          mins = "0" + mins; //to show 0 in single digits eg- 10:05
+        }
+
+        return `${month} ${date} | ${hours}:${mins}${period}`;
+      };
+
+      currentDate.innerHTML = getCurrentDay() + " | " + getCurrentTime();
+    </script>
   </body>
 </html>
