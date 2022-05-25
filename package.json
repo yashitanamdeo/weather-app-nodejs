@@ -1,0 +1,22 @@
+{
+  "name": "weather_app_nodejs",
+  "version": "1.0.0",
+  "description": "weather nodejs app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashitanamdeo/weather-app-nodejs.git"
+  },
+  "author": "yashita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashitanamdeo/weather-app-nodejs/issues"
+  },
+  "homepage": "https://github.com/yashitanamdeo/weather-app-nodejs#readme",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
+}
