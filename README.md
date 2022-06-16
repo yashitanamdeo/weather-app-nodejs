@@ -1,4 +1,4 @@
 # Weather App - nodejs
-This is WeatherApp V1 built using API, NodeJs and HTML
+This WeatherApp V1 is built using API, NodeJs and HTML
 <br>
 (The Readme is in progress..)
